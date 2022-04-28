@@ -29,7 +29,11 @@
                 </td>
 
                 <td>
-                    <a class="btn btn-danger" th:href="@{/users/{id}/delete (id=${user.getId()})}">Delete</a>
+
+                    <form th:method="DELETE" th:action="@{/users/{id}/delete (id=${user.getId()})}">
+                        <input class="btn btn-danger" type="submit" value="Delete"/>
+                    </form>
+
                 </td>
             </tr>
             </tbody>
